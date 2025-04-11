@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Cineru.lk</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans Sinhala', sans-serif;
+        }
+        
+        .nav-link {
+            @apply px-4 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-blue-600">Cineru.lk</a>
+                
+                <!-- Main Navigation -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="nav-link">Home</a>
+                    
+                    <!-- Movies Dropdown -->
+                    <div class="dropdown relative">
+                        <button class="nav-link flex items-center">
+                            චිත්‍රපට
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ඉංග්‍රීසි</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">තෙලුගු</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">දමිළ</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">මලයාලම්</a>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="nav-link">රුපවාහිනී කතාමාලා</a>
+                    <a href="contact-us.html" class="nav-link">Contact US</a>
+                </div>
+                
+                <!-- Login Button -->
+                <a href="login.html" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors duration-200">
+                    Login
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Contact Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-3xl font-bold text-gray-800 mb-4">Contact Us</h1>
+                <p class="text-gray-600">We'd love to hear from you. Please fill out this form and we'll get back to you as soon as possible.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact Information -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-6">Contact Information</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-envelope text-blue-600 text-xl w-6"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-800">Email</h3>
+                                <p class="text-gray-600">info@cineru.lk</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-clock text-blue-600 text-xl w-6"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-800">Response Time</h3>
+                                <p class="text-gray-600">We typically respond within 24-48 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-globe text-blue-600 text-xl w-6"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-800">Social Media</h3>
+                                <div class="flex space-x-4 mt-2">
+                                    <a href="#" class="text-gray-600 hover:text-blue-600">
+                                        <i class="fab fa-facebook text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-600 hover:text-blue-600">
+                                        <i class="fab fa-twitter text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-600 hover:text-blue-600">
+                                        <i class="fab fa-instagram text-xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <form id="contactForm" class="space-y-6">
+                        <!-- Name Input -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                                Your Name
+                            </label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                                required
+                            >
+                            <p class="hidden text-red-500 text-sm mt-1" id="nameError"></p>
+                        </div>
+
+                        <!-- Email Input -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                                Email Address
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                                required
+                            >
+                            <p class="hidden text-red-500 text-sm mt-1" id="emailError"></p>
+                        </div>
+
+                        <!-- Subject Input -->
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">
+                                Subject
+                            </label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                                required
+                            >
+                            <p class="hidden text-red-500 text-sm mt-1" id="subjectError"></p>
+                        </div>
+
+                        <!-- Message Input -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                                Message
+                            </label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="4" 
+                                class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                                required
+                            ></textarea>
+                            <p class="hidden text-red-500 text-sm mt-1" id="messageError"></p>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button 
+                            type="submit" 
+                            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="hover:text-blue-400">Home</a></li>
+                        <li><a href="#" class="hover:text-blue-400">චිත්‍රපට</a></li>
+                        <li><a href="#" class="hover:text-blue-400">රුපවාහිනී කතාමාලා</a></li>
+                        <li><a href="/contact-us.html" class="hover:text-blue-400">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400">ක්‍රියාදාම</a></li>
+                        <li><a href="#" class="hover:text-blue-400">අපරාධ</a></li>
+                        <li><a href="#" class="hover:text-blue-400">අභිරහස්</a></li>
+                        <li><a href="#" class="hover:text-blue-400">ආදර කතා</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <p class="mb-2">Email: info@cineru.lk</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-2xl hover:text-blue-400"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p>&copy; 2024 Cineru.lk. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Form validation
+        const contactForm = document.getElementById('contactForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const subjectInput = document.getElementById('subject');
+        const messageInput = document.getElementById('message');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+
+            // Reset errors
+            document.querySelectorAll('[id$="Error"]').forEach(el => el.classList.add('hidden'));
+
+            // Name validation
+            if (!nameInput.value.trim()) {
+                document.getElementById('nameError').textContent = 'Name is required';
+                document.getElementById('nameError').classList.remove('hidden');
+                isValid = false;
+            }
+
+            // Email validation
+            if (!emailInput.value.trim()) {
+                document.getElementById('emailError').textContent = 'Email is required';
+                document.getElementById('emailError').classList.remove('hidden');
+                isValid = false;
+            } else if (!/\S+@\S+\.\S+/.test(emailInput.value)) {
+                document.getElementById('emailError').textContent = 'Please enter a valid email address';
+                document.getElementById('emailError').classList.remove('hidden');
+                isValid = false;
+            }
+
+            // Subject validation
+            if (!subjectInput.value.trim()) {
+                document.getElementById('subjectError').textContent = 'Subject is required';
+                document.getElementById('subjectError').classList.remove('hidden');
+                isValid = false;
+            }
+
+            // Message validation
+            if (!messageInput.value.trim()) {
+                document.getElementById('messageError').textContent = 'Message is required';
+                document.getElementById('messageError').classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Here you would typically send the form data to your server
+                alert('Message sent successfully! We will get back to you soon.');
+                contactForm.reset();
+            }
+        });
+    </script>
+</body>
+</html>
