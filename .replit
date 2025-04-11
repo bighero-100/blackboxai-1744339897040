@@ -1,0 +1,15 @@
+language = "nodejs"
+run = "npm run dev"
+entrypoint = "server/server.js"
+
+[env]
+PORT = "3000"
+MONGO_URI = "mongodb://localhost:27017/cineru"
+JWT_SECRET = "your-secret-key"
+
+[nix]
+channel = "stable-22_11"
+
+[deployment]
+run = ["sh", "-c", "npm run start"]
+deploymentTarget = "cloudrun"
